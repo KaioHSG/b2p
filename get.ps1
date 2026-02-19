@@ -28,7 +28,12 @@ function Install-B2P {
 if (-not [string]::IsNullOrWhiteSpace($Install)) {
     try {
         $appScript = Invoke-RestMethod -Uri "$baseUrl/$Install/get.ps1" -UserAgent $ua
-        Write-Host "`n--- Loading External Installer: $Install ---`n" -ForegroundColor DarkGray
+        Write-Host "`nBinary-2-Path" -ForegroundColor Magenta
+        Write-Host "The command line installer script.`n"
+
+        Write-Host "Loading External Installer: $Install" -ForegroundColor Cyan
+        Write-Host ("." * 50) "`n" -ForegroundColor DarkGray
+        
         Invoke-Expression $appScript
     } catch {
         Write-Host "Error: Script '$Install' not found." -ForegroundColor Red
@@ -42,7 +47,7 @@ if (-not [string]::IsNullOrWhiteSpace($Install)) {
         $showInstallOption = (-not $commandExists -or $UpdatePath)
 
         Write-Host "`nBinary-2-Path" -ForegroundColor Magenta
-        Write-Host "The b2p installer is a simple command line installer script.`n"
+        Write-Host "The command line installer script.`n"
         
         if ($showInstallOption) {
             Write-Host "[0] > INSTALL 'b2p' COMMAND (Global Access) <" -ForegroundColor Cyan
