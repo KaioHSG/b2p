@@ -82,7 +82,7 @@ while ($true) {
 if ($isRemote) {
     $dataDir = Join-Path $installPath "installer-cache"
 } else {
-    $dataDir = Join-Path $baseDir "mingw-w64 Installer Data"
+    $dataDir = Join-Path $baseDir "mingw-builds-binaries Installer Data"
 }
 $binTools = Join-Path $dataDir "bin-tools"
 $latestBuildsDir = Join-Path $dataDir "latest-builds"
