@@ -8,7 +8,7 @@ $binFile    = "$installDir\b2p.bat"
 $b2pUrl     = "https://raw.githubusercontent.com/KaioHSG/b2p/refs/heads/main/get.ps1"
 $baseUrl    = "https://raw.githubusercontent.com/KaioHSG/b2p/refs/heads/main/dist"
 $apiUrl     = "https://api.github.com/repos/KaioHSG/b2p/contents/dist"
-$ua         = "B2P-Installer/1.0 (KaioHSG; +https://kaiohsg.dev)"
+$ua         = "B2P-Installer/1.0 (KaioHSG; +https://github.com/KaioHSG/b2p)"
 
 function Install-B2P {
     Write-Host "`nConfiguring global 'b2p' command..." -ForegroundColor Cyan
