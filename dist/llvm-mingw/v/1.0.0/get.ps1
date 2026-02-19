@@ -1,4 +1,4 @@
-# LLVM-MinGW Installer v1.0.1
+# LLVM-MinGW Installer v1.0.0
 
 $ErrorActionPreference = "Stop"
 
